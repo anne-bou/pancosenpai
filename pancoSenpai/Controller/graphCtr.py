@@ -216,6 +216,7 @@ class Graph:
         # filename = "toy.py"
         file = open(filename, "w")
         network =Network(servers, self.flows)
+        file.write("# This file has been generated with PancoSenpai\n\n")
         file.write("from panco.descriptor.curves import RateLatency, TokenBucket\n")
         file.write("from panco.descriptor.server import Server\n")
         file.write("from panco.descriptor.flow import Flow\n")
@@ -271,6 +272,7 @@ class Graph:
                    for i in range(len(self.sommets))]
         file = open(filename, "w")
         network =Network(servers, self.flows)
+        file.write("# This file has been generated with PancoSenpai\n\n")
         file.write("from panco.descriptor.curves import RateLatency, TokenBucket\n")
         file.write("from panco.descriptor.server import Server\n")
         file.write("from panco.descriptor.flow import Flow\n")
